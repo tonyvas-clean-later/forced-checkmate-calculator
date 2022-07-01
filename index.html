@@ -8,6 +8,163 @@
     <title>Forced Checkmate Calculator</title>
 </head>
 <body>
+    <h1>Forced Checkmate Calculator</h1>
+    <main>
+        <div id="board_container" class="container">
+            <canvas id="board"></canvas>
+        </div>
+        <div id="controls_container" class="container">
+            <h2>Controls</h2>
+            <div class="user_input">
+                <span>Depth</span>
+                <input type="number" id="depth_control" value="5" min="1">
+            </div>
+            <div class="user_input">
+                <span>Find all Solutions</span>
+                <input type="checkbox" id="all_solutions_control">
+            </div>
+            <div class="user_input">
+                <span>Player Turn</span>
+                <select id="turn_select">
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
+                </select>
+            </div>
+            <div class="user_input">
+                <input type="button" value="Start" onclick="start();">
+                <input type="button" value="Reset Board" onclick="reset();">
+            </div>
+        </div>
+        <div id="moves_container" class="container">
+            <h2>Moves</h2>
+            <div class="user_input">
+                <span>Pattern Select</span>
+                <select id="moves_select" disabled></select>
+            </div>
+            <table id="moves_table">
+                <thead>
+                    <tr>
+                        <th>Move #</th>
+                        <th>White's Move</th>
+                        <th>Black's Move</th>
+                    </tr>
+                </thead>
+                <tbody id="moves_tbody">
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
     <script src="main.js"></script>
 </body>
 </html>

@@ -2,3 +2,73 @@ html, body{
     background-color: #333;
     color: white;
 }
+
+h1, h2{
+    text-align: center;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "a b" "a c";
+    
+    
+    width: 75vw;
+    height: 85vh;
+    margin: auto;
+    border: 1px solid purple;
+}
+
+#board_container{
+    border: 1px solid red;
+    grid-area: a;
+    
+    
+    display: flex;
+    justify-content: center;
+}
+
+#controls_container{
+    border: 1px solid green;
+    grid-area: b;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#moves_container{
+    border: 1px solid blue;
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.user_input{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5%;
+
+    width: 50%;
+    margin: 5px auto 5px auto;
+}
+
+#board{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#moves_table{
+    width: 100%;
+    text-align: center;
+}
