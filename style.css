@@ -63,6 +63,11 @@ main{
     margin: 5px auto 5px auto;
 }
 
+#menu{
+    display: none;
+    position: absolute;
+}
+
 #board{
     max-width: 100%;
     max-height: 100%;

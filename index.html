@@ -12,6 +12,24 @@
     <main>
         <div id="board_container" class="container">
             <canvas id="board"></canvas>
+            <div id="menu">
+                <div>
+                    <button><img src="/assets/king_white.png" alt="White King"></button>
+                    <button><img src="/assets/queen_white.png" alt="White Queen"></button>
+                    <button><img src="/assets/rook_white.png" alt="White Rook"></button>
+                    <button><img src="/assets/bishop_white.png" alt="White Bishop"></button>
+                    <button><img src="/assets/knight_white.png" alt="White Knight"></button>
+                    <button><img src="/assets/pawn_white.png" alt="White Pawn"></button>
+                </div>
+                <div>
+                    <button><img src="/assets/king_black.png" alt="Black King"></button>
+                    <button><img src="/assets/queen_black.png" alt="Black Queen"></button>
+                    <button><img src="/assets/rook_black.png" alt="Black Rook"></button>
+                    <button><img src="/assets/bishop_black.png" alt="Black Bishop"></button>
+                    <button><img src="/assets/knight_black.png" alt="Black Knight"></button>
+                    <button><img src="/assets/pawn_black.png" alt="Black Pawn"></button>
+                </div>
+            </div>
         </div>
         <div id="controls_container" class="container">
             <h2>Controls</h2>
@@ -24,6 +42,10 @@
                 <input type="checkbox" id="all_solutions_control">
             </div>
             <div class="user_input">
+                <span>Rotate Board</span>
+                <input type="checkbox" id="rotate_control" onchange="onRotateChange();">
+            </div>
+            <div class="user_input">
                 <span>Player Turn</span>
                 <select id="turn_select">
                     <option value="White">White</option>
@@ -31,8 +53,8 @@
                 </select>
             </div>
             <div class="user_input">
-                <input type="button" value="Start" onclick="start();">
-                <input type="button" value="Reset Board" onclick="reset();">
+                <input type="button" value="Start" onclick="onStartClick();">
+                <input type="button" value="Reset Board" onclick="onResetClick();">
             </div>
         </div>
         <div id="moves_container" class="container">
@@ -49,122 +71,14 @@
                         <th>Black's Move</th>
                     </tr>
                 </thead>
-                <tbody id="moves_tbody">
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                    <tr>
-                        <td>a</td>
-                        <td>b</td>
-                        <td>c</td>
-                    </tr>
-                </tbody>
+                <tbody id="moves_tbody"></tbody>
             </table>
         </div>
     </main>
 
+    <script src="piece.js"></script>
+    <script src="tile.js"></script>
+    <script src="board.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
